@@ -14,6 +14,7 @@
 }
 
 :root{
+    /* Colors */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
     --primary-color: #FF0000;
@@ -44,8 +45,11 @@
 
     --color-white: #ffffff;
 
-    --main-font:AvenirRoman;
+    /* Fonts */
+    --main-font:"AvenirRoman", "Montserrat", "Poppins", sans-serif; 
+    --line-height: 1.5;
 
+    /* Transitions */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
@@ -57,4 +61,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font);
+}
+
+button {
+    border: none;
+    background-color: var(--sidebar-color);
+    padding: 5px;
+    margin: 10px;
 }

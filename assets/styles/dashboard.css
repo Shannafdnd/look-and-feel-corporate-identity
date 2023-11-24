@@ -145,9 +145,10 @@ header .image-text .profession{
 }
 
 @media only screen and (max-width: 478px) {
-    .sidebar header .toggle{
+    .sidebar{
         display: none;
     }
+
 }
 
 body.dark .sidebar header .toggle{
@@ -327,8 +328,8 @@ body.dark section .text{
 
 section#home .welcome-container {
     background-color: #fff;
-    border-radius: 2rem;
-    height: 10rem;
+    border-radius: 1rem;
+    height: 20rem;
     padding: 2rem;
 }
 
@@ -344,3 +345,4 @@ body.dark section#home .welcome-container p {
 body.dark .message {
     color: #96969F;
 }
+
