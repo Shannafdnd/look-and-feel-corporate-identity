@@ -24,7 +24,7 @@ main h2 {
     padding: 20px;
 }
 
-@media only screen and (max-width: 478px) {
+@media only screen and (max-width: 510px) {
     .wrapper {
         padding: 0 0 32px 0;
     }
@@ -48,7 +48,7 @@ body.dark .card {
     background-color: aqua;
 }
 
-@media only screen and (max-width: 478px) {
+@media only screen and (max-width: 510px) {
     .card {
         height: auto;
         box-shadow: none;
@@ -60,7 +60,7 @@ body.dark .card {
     padding: 15px 30px 15px 30px;
 }
 
-@media only screen and (max-width: 478px) {
+@media only screen and (max-width: 510px) {
     .card__container {
         padding: 15px 15px 15px 15px;
     }
@@ -83,7 +83,7 @@ body.dark .card {
     font-size: 25px;
 }
 
-@media only screen and (max-width: 478px) {
+@media only screen and (max-width: 510px) {
     .card__profile-wrapper h2 {
         font-size: 20px;
     }
@@ -103,7 +103,7 @@ body.dark .card {
     gap: 5px;
 }
 
-@media only screen and (max-width: 478px) {
+@media only screen and (max-width: 510px) {
     .card__item {
         font-size: 12px;
     }
@@ -121,13 +121,14 @@ body.dark .card {
     background-color: #FF0000;
     color: var(--sidebar-color);
     font-size: 20px;
-    width: 100px;
-    height: 30px;
+    padding: 0 15px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
-    right: 0;
+    left: calc(100% - 100px);
+    z-index: 2;
+    text-decoration: none;
 }
 
 body.dark .profile__btn {
@@ -138,7 +139,7 @@ body.dark .profile__btn:hover {
     background-color: #c10000;
 }
 
-@media only screen and (max-width: 478px) {
+@media only screen and (max-width: 510px) {
     .profile__btn {
         font-size: 15px;
         width: 80px;
@@ -162,7 +163,7 @@ body.dark .profile__btn:hover {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 478px) {
+@media only screen and (max-width: 510px) {
     .card-2 {
         margin-left: 8px;
     }
