@@ -377,13 +377,11 @@ body.dark section#home .welcome-container p {
     color: #ccc;
 }
 
-.message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+section h2 {
     font-weight: 900;
     text-transform: uppercase;
     color: #000;
+    text-align: center;
 }
 
 body.dark .message {
