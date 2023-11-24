@@ -13,15 +13,7 @@
     src: url(../font/Avenir\ -black.ttf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: AvenirMedium;
-}
-
 :root{
-    /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
     --primary-color: #FF0000;
@@ -29,9 +21,40 @@
     --toggle-color: #DDD;
     --text-color: #707070;
 
-    /* ====== Transition ====== */
+    --body-color: #e4e9f7;
+    --text-colorDark: #000000;
+    --text-colorLight: #707070;
+  
+    --accent-colorDark: #cccccc;
+
+    --color-magenta: #a22a86;
+    --color-deepPink: #fe2f7f;
+
+    --color-orangeRed: #ff561e;
+    --color-orange: #fda12b;
+
+    --color-deepSkyBlue: #3c389e;
+    --color-blue: #1370bd;
+    --color-darkSlateBlue: #31a3db;
+
+
+    --color-seaGreen: #32a182;
+    --color-forestGreen: #54af45;
+    --color-yellowGreen: #b2cb42;
+
+    --color-white: #ffffff;
+
+    --main-font:AvenirRoman;
+
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
 }
