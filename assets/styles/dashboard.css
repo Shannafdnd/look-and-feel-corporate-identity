@@ -19,7 +19,6 @@ body.dark{
     --red-color: #ff0000;
 }
 
-/* ===== Sidebar ===== */
  .sidebar{
     position: fixed;
     top: 0;
@@ -35,7 +34,6 @@ body.dark{
     width: 88px;
 }
 
-/* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;
     list-style: none;
@@ -92,8 +90,6 @@ body.dark{
     resize: none;
     opacity: 0;
 }
-
-/* =========================== */
 
 .sidebar header{
     position: relative;
@@ -330,14 +326,14 @@ body.dark section .text{
 }
 
 section#home .welcome-container {
-    background-color: #96969F;
+    background-color: #fff;
     border-radius: 2rem;
     height: 10rem;
     padding: 2rem;
 }
 
 section#home .welcome-container p {
-    color: var(--sidebar-color);
+    color: var(--red-color);
     font-size: 25px;
 }
 
