@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/styles/login.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
     <title>OBA Login</title>
 </head>
 <body>
     <img src="./assets/image/oba_20.png" alt="OBA logo">
-    <form class="login-container" method="post" action="./assets/pages/profile.html">
+    <form class="login-container">
         <h2>Login</h2>
-        <div class="input-container">
-            <input type="text" placeholder="Pasnummer of e-mailadres" required>
-        </div>
-        <div class="input-container">
-            <input id="password" type="password" placeholder="Wachtwoord" required>
-        </div>
-        <button class="login-button" type="submit">Inloggen</button>
-        <div class="link-container">
-            <a>Wachtwoord vergeten?</a>
-        </div>
-        <div class="link-container">
-            <a>Hulp nodig met inloggen?</a>
-        </div>
-    </div>
+
+            <div class="input-container">
+                <input type="text" placeholder="Pasnummer of e-mailadres" required>
+            </div>
+
+            <div class="input-container">
+                <input id="password" type="password" placeholder="Wachtwoord" required>
+            </div>
+
+            <button class="login-button">Inloggen</button>
+
+            <div class="link-container">
+                <a>Wachtwoord vergeten?</a>
+            </div>
+
+            <div class="link-container">
+                <a>Hulp nodig met inloggen?</a>
+            </div>
+    </form>
 </body>
 </html>
