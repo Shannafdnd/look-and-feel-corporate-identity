@@ -4,24 +4,34 @@
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Link naar CSS -->
         <link rel="stylesheet" href="../styles/dashboard.css"/>
         <link rel="stylesheet" href="../styles/main.css">
+        <!-- Link naar boxicons -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
         <link rel="icon" type="image/x-icon" href="../image/favicon.ico">
+        <!-- Link naar javascript -->
         <script src="../scripts/script.js" defer></script>
         <title>Mijn OBA</title>
     </head>
 
     <body>
+        
+        <header class="header">
+            <button id="hamburger-menu" role="button"> <img src="../image/menu-svgrepo-com.svg" alt="open menu"> </button>
+            <div class="oba-logo"><img src="../image/oba_20.png" alt=""/></div>
+        </header>
+
+        <!-- NAVBAR -->
         <nav class="sidebar close">
             <header>
                 <div class="image-text">
                     <span class="image">
                         <img
-                            src="../image/kwengface.png" alt="Gebruiker-foto"/>
+                            src="../image/fatima pfp.jpeg" alt="Gebruiker-foto"/>
                     </span>
                     <div class="text logo-text">
-                        <span class="name">Kwengface</span> 
+                        <span class="name">Fatima el Amrani</span> 
                         <span class="profession">1 jaar lid</span>
                     </div>
                 </div>
@@ -98,40 +108,46 @@
                 </div>
             </div>
         </nav>
+        
+        <!-- HOMEPAGINA -->
+        <main>
+            <section class="home tabcontent" id="home">
+                <div class="welcome-container">
+                    <p>Welkom Fatima, u bevind zich op de thuispagina van</p>
+                    <div class="oba-logo"><img src="../image/oba.png" alt=""/></div>
+                </div>
+            </section>
 
-        <section class="home tabcontent" id="home">
-            <div class="text"><img src="../image/oba_20.png" alt=""/></div>
-            <div class="welcome-container"><p>Welkom Kwengface, u bevind zich op de thuispagina.</p></div>
-        </section>
-
-        <section class="home tabcontent" id="reading-list">
-            <div class="text"><img src="../image/oba_20.png" alt=""/></div>
-            <div>fewfew</div>
-        </section>
-        
-        <section class="home tabcontent" id="borrows-extensions">
-            <div class="text"><img src="../image/oba_20.png" alt=""/></div>
-            <div>fewfew</div>
-        </section>
-        
-        <section class="home tabcontent" id="borrow-history">
-            <div class="text"><img src="../image/oba_20.png" alt=""/></div>
-            <div>fewfew</div>
-        </section>
-        
-        <section class="home tabcontent" id="payment-history">
-            <div class="text"><img src="../image/oba_20.png" alt=""/></div>
-            <div>fewfew</div>
-        </section>
-        
-        <section class="home tabcontent" id="reservations">
-            <div class="text"><img src="../image/oba_20.png" alt=""/></div>
-            <div>fewfew</div>
-        </section>
-        
-        <section class="home tabcontent" id="deposits">
-            <div class="text"><img src="../image/oba_20.png" alt=""/></div>
-            <div>fewfew</div>
-        </section>
+            <!-- LEESLIJST -->
+            <section class="home tabcontent" id="reading-list">
+                <div class="oba-logo"><img src="../image/oba_20.png" alt=""/></div>
+                <div class="Boek-leeslijst">fewfew</div>
+            </section>
+            
+            <section class="home tabcontent" id="borrows-extensions">
+                <div class="text"><img src="../image/oba_20.png" alt=""/></div>
+                <div>fewfew</div>
+            </section>
+            
+            <section class="home tabcontent" id="borrow-history">
+                <div class="text"><img src="../image/oba_20.png" alt=""/></div>
+                <div>fewfew</div>
+            </section>
+            
+            <section class="home tabcontent" id="payment-history">
+                <div class="text"><img src="../image/oba_20.png" alt=""/></div>
+                <div>fewfew</div>
+            </section>
+            
+            <section class="home tabcontent" id="reservations">
+                <div class="text"><img src="../image/oba_20.png" alt=""/></div>
+                <div>fewfew</div>
+            </section>
+            
+            <section class="home tabcontent" id="deposits">
+                <div class="text"><img src="../image/oba_20.png" alt=""/></div>
+                <div>fewfew</div>
+            </section>
+        </main>
     </body>
 </html>
