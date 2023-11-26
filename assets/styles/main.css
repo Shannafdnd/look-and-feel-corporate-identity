@@ -14,6 +14,7 @@
 }
 
 :root{
+    /* Colors */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
     --primary-color: #FF0000;
@@ -42,19 +43,33 @@
     --color-forestGreen: #54af45;
     --color-yellowGreen: #b2cb42;
 
-    --color-white: #ffffff;
+    /* Fonts */
+    --main-font:"AvenirRoman", "Montserrat", "Poppins", sans-serif; 
+    --line-height: 1.5;
 
-    --main-font:AvenirRoman;
-
+    /* Transitions */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font);
+    transition: var(--tran-03)
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    background-color: var(--sidebar-color);
+    padding: 6px;
+    margin: 10px;
+}
+
+.oba-logo {
+    padding-right: 10px;
 }
