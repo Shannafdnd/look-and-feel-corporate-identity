@@ -332,6 +332,10 @@ section#home .welcome-container {
     padding: 2rem;
 }
 
+body.dark section#home .welcome-container {
+    background-color: var(--sidebar-color);
+}
+
 section#home .welcome-container p {
     color: var(--red-color);
     font-size: 25px;
