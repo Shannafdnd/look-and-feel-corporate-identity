@@ -22,7 +22,7 @@
     --toggle-color: #DDD;
     --text-color: #707070;
 
-    --body-color: rgb(234, 232, 243);
+    --body-color: #e4e9f7;
     --text-colorDark: #000000;
     --text-colorLight: #707070;
   
@@ -44,7 +44,7 @@
     --color-yellowGreen: #b2cb42;
 
     /* Fonts */
-    --main-font:"AvenirRoman", "AwesomeFont", "Poppins", sans-serif; 
+    --main-font:"AvenirRoman", "Montserrat", "Poppins", sans-serif; 
     --line-height: 1.5;
 
     /* Transitions */
@@ -72,8 +72,4 @@ button {
 
 .oba-logo {
     padding-right: 10px;
-}
-
-p {
-    width: 500px;
 }
