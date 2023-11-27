@@ -322,6 +322,34 @@ body.dark .message {
     color: #96969F;
 }
 
+.reading-list {
+    display: grid;
+    gap: 20px;
+}
+
+.book-readinglist {
+    background-color: #fff;
+    width: 50em;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+}
+
+.section-header {
+    position: absolute;
+    top: 20px;
+    left: 30vw;
+    width: 40vw;
+    background-color: white;
+    padding: 17px 0;
+    border-radius: 20px;
+}
+
+.section-header h2 {
+    width: 100%;
+    text-align: center;
+}
+
 @media only screen and (max-width: 478px) {
     .sidebar.close {
         display: none;
