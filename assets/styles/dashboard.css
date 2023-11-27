@@ -273,8 +273,7 @@ section {
 
 section h2 {
     font-weight: 900;
-    text-transform: uppercase;
-    color: #000;
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -335,6 +334,8 @@ body.dark .message {
     display: flex;
     width: 80vw;
     left: 10vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 .list-text {
@@ -379,6 +380,7 @@ body.dark .message {
     background-color: white;
     padding: 17px 0;
     border-radius: 20px;
+    box-shadow: 4px 4px 0 rgb(255, 0, 0);
 }
 
 .section-header h2 {
@@ -413,6 +415,10 @@ body.dark .message {
 
     main {
         margin-top: 67px;
+    }
+
+    .info-book {
+        display: none;
     }
 
 }

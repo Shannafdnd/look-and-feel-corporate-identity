@@ -75,5 +75,9 @@ button {
 }
 
 p {
-    width: 500px;
+    max-width: 500px;
+}
+
+h1 {
+    color: red;
 }
