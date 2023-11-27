@@ -159,7 +159,6 @@ body.dark .sidebar header .toggle {
 .sidebar li.search-box input {
     height: 100%;
     width: 100%;
-    outline: none;
     border: none;
     background-color: var(--primary-color-light);
     color: var(--text-color);
@@ -273,8 +272,7 @@ section {
 
 section h2 {
     font-weight: 900;
-    text-transform: uppercase;
-    color: #000;
+    color:#3a3b3c;
     text-align: center;
 }
 
@@ -322,6 +320,71 @@ body.dark .message {
     color: #96969F;
 }
 
+.reading-list {
+    display: grid;
+    gap: 20px;
+}
+
+.book-readinglist {
+    background-color: #fff;
+    width: 80vw;
+    left: 10vw;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+}
+
+.list-text {
+    display: flex;
+}
+
+.search-box-home {
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 30vw;
+    width: 40vw;
+    padding: 17px 0;
+    border-radius: 20px;
+}
+
+.search-box-home input {
+    position: absolute;
+    border: none;
+    width: 500px;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    top: 20px;
+    width: 40vw;
+    padding: 17px 0;
+    border-radius: 20px;
+}
+
+.button {
+    color: #fff;
+    background-color: #18191a;
+    cursor: pointer;
+}
+
+.section-header {
+    position: absolute;
+    top: 20px;
+    left: 30vw;
+    width: 40vw;
+    background-color: white;
+    padding: 17px 0;
+    border-radius: 20px;
+}
+
+.section-header h2 {
+    width: 100%;
+    text-align: center;
+}
+
 @media only screen and (max-width: 478px) {
     .sidebar.close {
         display: none;
@@ -349,6 +412,11 @@ body.dark .message {
 
     main {
         margin-top: 67px;
+    }
+
+    .section-header {
+        top:0;
+        z-index: 2;
     }
 
 }
