@@ -334,6 +334,10 @@ section#reservations h3{
     font-size: 1.563rem;
 }
 
+body.dark section#reservations h3{
+    color: var(--text-color);
+}
+
 @media only screen and (max-width: 478px) {
     section#reservations h3{
         font-size: 1.25rem;
