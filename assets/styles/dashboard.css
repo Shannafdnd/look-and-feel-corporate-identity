@@ -321,6 +321,14 @@ body.dark .message {
     color: #96969F;
 }
 
+
+section#borrow-history .borrowHistory-wrapper {
+    background-color: var(--sidebar-color);
+    border-radius: 1rem;
+    height: auto;
+    padding: 2rem;
+}
+
 section#reservations .reservation-wrapper {
     background-color: var(--sidebar-color);
     border-radius: 1rem;
