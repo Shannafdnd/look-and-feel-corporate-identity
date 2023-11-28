@@ -300,7 +300,7 @@ body.dark section .text {
 section#home .welcome-container {
     background-color: var(--sidebar-color);
     border-radius: 1rem;
-    height: 20rem;
+    height: auto;
     padding: 2rem;
 }
 
@@ -319,6 +319,25 @@ body.dark section#home .welcome-container p {
 
 body.dark .message {
     color: #96969F;
+}
+
+section#reservations .reservation-wrapper {
+    background-color: var(--sidebar-color);
+    border-radius: 1rem;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section#reservations h3{
+    font-size: 1.563rem;
+}
+
+@media only screen and (max-width: 478px) {
+    section#reservations h3{
+        font-size: 1.25rem;
+    }
 }
 
 .reading-list {
