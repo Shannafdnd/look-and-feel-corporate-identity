@@ -25,16 +25,17 @@
         <!-- NAVBAR -->
         <nav class="sidebar close">
             <header>
-                <div class="image-text">
-                    <span class="image">
-                        <img
-                            src="../image/fatima pfp.jpeg" alt="Gebruiker-foto"/>
-                    </span>
-                    <div class="text logo-text">
-                        <span class="name">Fatima</span> 
-                        <span class="profession">1 jaar lid</span>
+                <a onclick="switchTab(event, 'profile')" href="#">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="../image/fatima pfp.jpeg" alt="Gebruiker-foto"/>
+                        </div>
+                        <div class="text logo-text">
+                            <span class="name">Fatima</span> 
+                            <span class="profession">1 jaar lid</span>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <i class="bx bx-chevron-right toggle"></i>
             </header>
             <div class="menu-bar">
@@ -59,7 +60,7 @@
                         <li class="nav-link tablinks" onclick="switchTab(event, 'borrows-extensions')">
                             <a href="#">
                                 <i class="bx bx-bar-chart-alt-2 icon"></i>
-                                <span class="text-long nav-text">Uitleningen en verlengingen</span>
+                                <span class="text-long nav-text">Uitleningen</span>
                             </a>
                         </li>
                         <li class="nav-link tablinks" onclick="switchTab(event, 'borrow-history')">
@@ -80,7 +81,7 @@
                                 <span class="text nav-text">Reserveringen</span>
                             </a>
                         </li>
-                        <li class="nav-link tablinks" onclick="switchTab(event, 'deposits')">
+                        <li class="nav-link tablinks" onclick="switchTab(event, 'depositos')">
                             <a href="#">
                                 <i class="bx bx-wallet icon"></i>
                                 <span class="text nav-text">Deposito's</span>
@@ -110,23 +111,38 @@
         </nav>
         
         <main>
+            <!-- PROFIEL -->
+            <section class="home tabcontent" id="profile">
+                <div class="oba-logo"><img src="../image/oba_20.png" alt="oba-logo"/></div>
+                <h2 class="section-header">
+                    <i class="bx bx-list-ul icon"></i>
+                    Profiel
+                </h2>
+            </section>
+
             <!-- HOMEPAGINA -->
             <section class="home tabcontent" id="home">
                 <div class="search-box-home">
                     <i class="bx bx-search icon"></i>
-                    <input type="text" placeholder="Waar ben je naar op zoek?"/>
+                    <input type="text" placeholder="Zoeken"/>
                 </div> 
                 <div class="welcome-container">
                     <p>Welkom Fatima, u bevind zich op de thuispagina van</p>
                     <div class="oba-logo"><img src="../image/oba.png" alt=""/></div>
-                    <button class="button">
-                        Ga naar leeslijst > 
+                    <button class="button" onclick="switchTab(event, 'reading-list')">
+                        <a href="#">
+                            Ga naar leeslijst
+                            <svg fill="#fff" width="10" height="10">
+                                <polygon points="0,0 10,5 0,10 "/>
+                            </svg>
+                        </a>
                     </button>
                 </div>
             </section>
 
             <!-- LEESLIJST -->
             <section class="home tabcontent" id="reading-list">
+                <div class="oba-logo"><img src="../image/oba_20.png" alt="oba-logo"/></div>
                 <h2 class="section-header">
                     <i class="bx bx-list-ul icon"></i>
                     Leeslijst
@@ -161,7 +177,7 @@
             <section class="home tabcontent" id="borrows-extensions">
                 <h2 class="section-header">
                     <i class="bx bx-bar-chart-alt-2 icon"></i>
-                    Uitleningen en verlengingen
+                    Uitleningen
                 </h2>
             </section>
             
