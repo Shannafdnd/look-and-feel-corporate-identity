@@ -1,6 +1,6 @@
 body {
     background-color: var(--body-color);
-    background-image: url("/assets/image/background.svg");
+    background-image: url("../image/background.svg");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-attachment: fixed;
