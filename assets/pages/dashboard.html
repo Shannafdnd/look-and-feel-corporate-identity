@@ -232,6 +232,17 @@
                     <i class="bx bx-pie-chart-alt icon"></i>
                     Betaalgeschiedenis
                 </h2>
+
+                <div>
+                    <p>
+                        In het overzicht hieronder kunt u de recente bij- en afschriften van uw profiel bekijken.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3>Afgelopen transacties</h3>
+                    
+                </div>
             </section>
             
             <section class="home tabcontent" id="reservations">
@@ -250,6 +261,33 @@
                     <i class="bx bx-wallet icon"></i>
                     Deposito's
                 </h2>
+
+                <div>
+                    <p>Hier kunt u uw OBA lenerstegoed opwaarderen, dit wordt gebruikt als u het maandelijkse limiet van tegoed overschrijdt.</p>
+                    <p>Onder <a onclick="switchTab(event, 'payment-history')" href="#"><strong>betaalgeschiedenis</strong></a> vind u informatie over afgelopen transacties terug.</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>Huidig tegoed</h3>
+                        <b>€24,86</b>
+                    </div>
+                    <aside>
+                        <h3>Tegoed opwaarderen</h3>
+                        <form action="#">
+                            <label for="amount">Bedrag:</label>
+                            <input type="text" id="-deposit-amount" name="deposit amount" required>
+                            <input type="submit" value="Betalen">
+                          </form>
+
+                          <div>
+                            Betaalmethode:
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><path d="M125.6 165.5a49.1 49.1 0 1 0 49.1 49.1A49.1 49.1 0 0 0 125.6 165.5zM86.2 425.8h78.9V285.3H86.2zm151.5-211.6c0-20-10-22.5-18.7-22.5H204.8V237.5h14.1C228.6 237.5 237.6 234.7 237.6 214.2zm201.7 46V168.9h22.8V237.5h33.7C486.5 113.1 388.6 86.2 299.7 86.2H204.8V169h14c25.6 0 41.5 17.4 41.5 45.3 0 28.8-15.5 46-41.5 46h-14V425.9h94.8c144.6 0 194.9-67.2 196.7-165.6zm-109.8 0H273.3V169h54.4v22.7H296v10.6h30V225H296V237.5h33.5zm74.7 0-5.2-17.7H369.3l-5.2 17.7H340.5L368 168.9h32.4l27.5 91.3zM299.7 32H32V480H299.7c161.9 0 251-79.7 251-224.5C550.6 172 518 32 299.7 32zm0 426.9H53.1V53.1H299.7c142.1 0 229.9 64.6 229.9 202.4C529.6 389.6 448.6 458.9 299.7 458.9zm83.9-264.9L376 219.9H392.4l-7.5-25.8z"/></svg>
+                          </div>
+                    </aside>
+                </div>
             </section>
         </main>
     </body>
