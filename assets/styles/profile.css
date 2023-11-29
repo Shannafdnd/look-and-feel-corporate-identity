@@ -15,7 +15,8 @@ main h2 {
     margin-bottom: 2rem;
 }
 
-main img:nth-child(1) {
+main > img {
+    position: absolute;
     margin: 0 0 2rem 2rem;
 }
 
@@ -194,12 +195,17 @@ body.dark .card-2:hover {
 }
 
 .profile__logout-position {
-    /* width: 50px;
-    height: 50px; */
-    background-color: #000;
-    position: relative;
-    left: calc(100% - 82px);
-    margin-top: 2rem;
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+
+    & a {
+        padding: .5rem 1rem;
+        border-radius: 1.5rem;
+        background-color: var(--sidebar-color);
+    }
 }
 
 @media screen and (min-width: 1474px) {
