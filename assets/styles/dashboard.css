@@ -19,7 +19,7 @@ body {
     width: 250px;
     padding: 10px 14px;
     background: var(--sidebar-color);
-    z-index: 100;  
+    z-index: 100;
 }
 
 .sidebar.close {
@@ -244,7 +244,7 @@ body.dark .mode .sun-moon i.moon {
 }
 
 .switch::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 15px;
     width: 15px;
@@ -265,7 +265,6 @@ section {
     width: calc(100% - 250px);
     padding: 12px 30px;
 }
-
 
 section h2 {
     color: var(--text-color);
@@ -313,7 +312,97 @@ body.dark section#home .welcome-container p {
 }
 
 body.dark .message {
-    color: #96969F;
+    color: #96969f;
+}
+
+section#borrow-history .borrowHistory-wrapper {
+    background-color: var(--sidebar-color);
+    border-radius: 1rem;
+    height: auto;
+    padding: 2rem;
+}
+
+section#borrow-history .flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+section#borrow-history .book-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#borrow-history img {
+    aspect-ratio: 1 / 1;
+    width: 50%;
+}
+
+section#borrow-history h4 {
+    color: #000;
+}
+
+body.dark section#borrow-history h4{
+    color: #ccc;
+}
+
+section#borrow-history p {
+    color: #000;
+}
+
+body.dark section#borrow-history p{
+    color: #ccc;
+}
+
+@media only screen and (max-width: 786px) {
+    section#borrow-history .flex-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 478px) {
+
+    section#borrow-history .flex-container {
+        flex-direction: column;
+    }
+
+    section#borrow-history .book-container {
+        margin-top: 1.25rem;
+        flex-direction: column;
+    }
+
+    section#borrow-history h4 {
+        font-size: 16px;
+    }
+
+    section#borrow-history p {
+        font-size: 14px;
+    }
+}
+
+section#reservations .reservation-wrapper {
+    background-color: var(--sidebar-color);
+    border-radius: 1rem;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section#reservations h3 {
+    font-size: 1.563rem;
+}
+
+body.dark section#reservations h3 {
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 478px) {
+    section#reservations h3 {
+        font-size: 1.25rem;
+    }
 }
 
 .reading-list {
@@ -374,7 +463,6 @@ body.dark .message {
     background-color: #18191a;
     cursor: pointer;
 }
-
 
 .section-header {
     position: fixed;
@@ -461,7 +549,8 @@ body.dark .message {
         display: none;
     }
 
-    .sidebar.close ~ main section, .sidebar ~ main section {
+    .sidebar.close ~ main section,
+    .sidebar ~ main section {
         margin-left: 0;
         width: 100%;
     }
@@ -496,7 +585,7 @@ body.dark .message {
         text-wrap: nowrap;
         justify-content: center;
     }
-    
+
     .search-box-home {
         z-index: 2;
         top: 5px;
