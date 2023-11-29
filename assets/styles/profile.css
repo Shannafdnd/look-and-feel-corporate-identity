@@ -193,15 +193,6 @@ body.dark .card-2:hover {
     transition: 0.5s;
 }
 
-.profile__logout-position {
-    /* width: 50px;
-    height: 50px; */
-    background-color: #000;
-    position: relative;
-    left: calc(100% - 82px);
-    margin-top: 2rem;
-}
-
 @media screen and (min-width: 1474px) {
     .profile__logout-position {
         margin-top: 7rem;

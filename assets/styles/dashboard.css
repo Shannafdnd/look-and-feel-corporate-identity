@@ -1,5 +1,9 @@
 body {
     background-color: var(--body-color);
+    background-image: url("/assets/image/background.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 ::selection {
@@ -7,17 +11,7 @@ body {
     color: var(--sidebar-color);
 }
 
-body.dark {
-    --body-color: #18191a;
-    --sidebar-color: #242526;
-    --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --text-color: #ccc;
-    --red-color: #ff0000;
-}
-
- .sidebar {
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,6 +21,7 @@ body.dark {
     background: var(--sidebar-color);
     z-index: 100;  
 }
+
 .sidebar.close {
     width: 88px;
 }
@@ -36,7 +31,12 @@ body.dark {
     list-style: none;
     display: flex;
     align-items: center;
+    margin: 0 3px;
     margin-top: 10px;
+}
+
+.sidebar.close li {
+    margin: 0;
 }
 
 .sidebar header .image,
@@ -138,7 +138,7 @@ header .image-text .profession {
     cursor: pointer;
 }
 
-body.dark .sidebar header .toggle {
+.sidebar header {
     color: var(--text-color);
 }
 
@@ -187,10 +187,6 @@ body.dark .sidebar header .toggle {
 .sidebar li a:hover .text-long {
     color: var(--sidebar-color);
 }
-body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text {
-    color: var(--text-color);
-}
 
 .sidebar .menu-bar {
     height: calc(100% - 55px);
@@ -238,6 +234,7 @@ body.dark .mode .sun-moon i.moon {
     border-radius: 6px;
     cursor: pointer;
 }
+
 .toggle-switch .switch {
     position: relative;
     height: 22px;
@@ -264,15 +261,13 @@ body.dark .switch::before {
 
 section {
     margin-left: 250px;
-    height: calc(100vh - 67px);
+    height: calc(100vh - 109px);
     width: calc(100% - 250px);
-    background-color: var(--body-color);
     padding: 12px 30px;
 }
 
 
 section h2 {
-    font-weight: 900;
     color: var(--text-color);
     text-align: center;
 }
@@ -290,7 +285,6 @@ section .text {
 
 .sidebar.close ~ main section {
     margin-left: 78px;
-    height: calc(100vh - 67px);
     width: calc(100% - 78px);
 }
 body.dark section .text {
@@ -299,9 +293,10 @@ body.dark section .text {
 
 section#home .welcome-container {
     background-color: var(--sidebar-color);
-    border-radius: 1rem;
-    height: 20rem;
+    border-radius: 2rem;
+    height: 30vh;
     padding: 2rem;
+    margin-bottom: 7vh;
 }
 
 body.dark section#home .welcome-container {
@@ -335,23 +330,35 @@ body.dark .message {
     width: 80vw;
     left: 10vw;
     display: flex;
-    justify-content: space-between;
+    gap: 5vw;
 }
 
 .list-text {
     display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vh;
 }
+
 .search-box-home {
     border-radius: 6px;
     position: absolute;
     top: 20px;
     left: 30vw;
     width: 40vw;
-    padding: 17px 10px;
+    padding: 0 10px;
     border-radius: 20px;
     background-color: var(--primary-color-light);
     display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 0 rgb(255, 0, 0);
 }
+
+.search-box-home:has(input:focus), 
+.sidebar li.search-box:has(input:focus) {
+    outline: 1px solid red;
+}
+
 .search-box-home input {
     border: none;
     background-color: unset;
@@ -359,6 +366,7 @@ body.dark .message {
     font-size: 17px;
     font-weight: 500;
     width: 40vw;
+    height: 56px;
     outline: none;
 }
 .button {
@@ -369,7 +377,7 @@ body.dark .message {
 
 
 .section-header {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 30vw;
     width: 40vw;
@@ -377,6 +385,7 @@ body.dark .message {
     padding: 17px 0;
     border-radius: 20px;
     box-shadow: 4px 4px 0 rgb(255, 0, 0);
+    overflow: hidden; /* TODO: fix */
 }
 
 .section-header h2 {
@@ -384,7 +393,70 @@ body.dark .message {
     text-align: center;
 }
 
+.big {
+    font-size: xx-large;
+}
+
+.left {
+    text-align: left;
+}
+
+.oba-logo {
+    display: flex;
+    justify-content: end;
+
+}
+
+.books-row {
+    margin-top: 3vh;
+    width: 100%;
+}
+
+.books-row ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+}
+
+.books-row ul li {
+    background-color: var(--sidebar-color);
+    color: var(--text-color-inv-dark);
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(20vh + 3vw + 3vh);
+}
+
+.books-row ul li img {
+    max-height: 20vh;
+}
+
+.reserve {
+    height: fit-content;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --body-color: #18191a;
+        --sidebar-color: #242526;
+        --primary-color: #3a3b3c;
+        --primary-color-light: #3a3b3c;
+        --toggle-color: #fff;
+        --text-color: #ccc;
+        --text-color-inv-dark: #ccc;
+        --red-color: #f00;
+    }
+}
+
+
 @media only screen and (max-width: 478px) {
+    body {
+        background-position: bottom center;
+    }
+
     .sidebar.close {
         display: none;
     }
@@ -434,6 +506,14 @@ body.dark .message {
     .search-box-home:has(input:focus) {
         width: 100vw;
         left: 0;
+    }
+
+    .books-row {
+        display: none;
+    }
+    
+    .to-big-for-mobile {
+        display: none;
     }
 
 }

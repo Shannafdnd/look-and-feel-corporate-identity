@@ -17,18 +17,8 @@ hamburger.addEventListener("click" , () =>{
 
 searchBtn.addEventListener("click" , () =>{
     sidebar.classList.remove("close");
+    searchBtn.querySelector("input").focus();
 })
-
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Light mode";
-    }else{
-        modeText.innerText = "Dark mode";
-
-    }
-});
 
 function switchTab(evt, tabName) {
     var i, tabcontent, tablinks;
