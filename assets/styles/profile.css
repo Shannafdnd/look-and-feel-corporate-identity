@@ -39,7 +39,7 @@ main > img {
     background-color: var(--sidebar-color);
     width: 250px;
     height: 350px;
-    border-radius: 3em;
+    border-radius: 1rem;
     box-shadow: -12px 12px 8px rgba(0, 0, 0, 0.20);
 }
 
@@ -214,6 +214,7 @@ body.dark .card-2:hover {
         padding: .5rem 1rem;
         border-radius: 1.5rem;
         background-color: var(--sidebar-color);
+        color: var(--text-color);
     }
 }
 
