@@ -552,10 +552,11 @@ section#reservations h3 {
 section#depositos {
 
     & > div {
-        background-color: #fff;
+        background-color: var(--sidebar-color);
         height: auto;
         padding: 2rem;
         border-radius: 1rem;
+        color: #fff;
     }
 
     & > div:nth-child(2) {
@@ -565,7 +566,7 @@ section#depositos {
 
             & > a {
               display: inline-block;
-              color: var(--primary-color);
+              color: red;
             }
             
             & > a::after {
@@ -574,7 +575,7 @@ section#depositos {
               height: 2px;
               display: block;
               transition: var(--tran-02);
-              background: var(--primary-color);
+              background: red;
             }
               
             & > a:hover::after {
@@ -621,6 +622,7 @@ section#depositos {
 
                 & > svg {
                     margin-left: .5rem;
+                    fill: #f00;
                 }
             }
 
@@ -651,10 +653,11 @@ section#depositos {
 section#payment-history {
 
     & > div {
-        background-color: #fff;
+        background-color: var(--sidebar-color);
         height: auto;
         padding: 2rem;
         border-radius: 1rem;
+        color: #fff;
     }
 
     & > div:nth-child(2) {
