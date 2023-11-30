@@ -53,6 +53,12 @@
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
+
+    /* Border-radius */
+    --primary-radius: 1rem;
+
+    /* Section content */
+    --section-content-width: 100%;
 }
 
 * {

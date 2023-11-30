@@ -570,7 +570,7 @@ section#depositos {
             }
             
             & > a::after {
-              content: '';
+              content: "";
               width: 0px;
               height: 2px;
               display: block;
