@@ -75,6 +75,10 @@ a {
     text-decoration: none;
 }
 
+label {
+    color: var(--text-color);
+}
+
 button a {
     color: white;
 }

@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </a>
-                <i class="bx bx-chevron-right toggle"></i>
+                <i class="bx bx-chevron-right toggle-navbar"></i>
             </header>
             <div class="menu-bar">
                 <div class="menu">
@@ -96,7 +96,7 @@
                             <span class="text nav-text">Ander profiel</span>
                         </a>
                     </li>
-                    <li class="settings">
+                    <li class="nav-link tablinks" onclick="switchTab(event, 'settings')">
                         <a href="#">
                             <i class="bx bxs-cog icon"></i>
                             <span class="text nav-text">Instellingen</span>
@@ -143,7 +143,7 @@
                         </a>
                     </button>
                 </div>
-                <h2 class="left to-big-for-mobile">Nieuwe in de collectie &gt;</h2>
+                <h2 class="left to-big-for-mobile">Nieuw in de collectie &gt;</h2>
                 <div class="books-row">
                     <ul>
                         <li>
@@ -312,6 +312,18 @@
                     <i class="bx bx-wallet icon"></i>
                     Deposito's
                 </h2>
+            </section>
+
+            <section class="home tabcontent" id="settings">
+                <h2 class="section-header">
+                    <i class="bx bxs-cog icon"></i>
+                    Instellingen
+                </h2>
+                <label for="darkmode">Donker thema</label>
+                <label for="darkmode" class="toggle-checkbox">
+                    <input type="checkbox" id="darkmode">
+                    <div class="round"></div>
+                </label>
             </section>
         </main>
     </body>

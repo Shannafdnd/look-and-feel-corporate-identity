@@ -7,7 +7,7 @@ body {
 }
 
 ::selection {
-    background-color: var(--primary-color);
+    background-color: #f00;
     color: var(--sidebar-color);
 }
 
@@ -121,7 +121,7 @@ header .image-text .profession {
     border-radius: 180px;
 }
 
-.sidebar header .toggle {
+.sidebar header .toggle-navbar {
     position: absolute;
     top: 50%;
     right: -25px;
@@ -129,7 +129,7 @@ header .image-text .profession {
     height: 25px;
     width: 25px;
     background-color: var(--primary-color);
-    color: var(--sidebar-color);
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -142,7 +142,7 @@ header .image-text .profession {
     color: var(--text-color);
 }
 
-.sidebar.close .toggle {
+.sidebar.close .toggle-navbar {
     transform: translateY(-50%) rotate(0deg);
 }
 
@@ -185,7 +185,7 @@ header .image-text .profession {
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text,
 .sidebar li a:hover .text-long {
-    color: var(--sidebar-color);
+    color: #fff;
 }
 
 .sidebar .menu-bar {
@@ -198,65 +198,6 @@ header .image-text .profession {
 }
 .menu-bar::-webkit-scrollbar {
     display: none;
-}
-.sidebar .menu-bar .mode {
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    position: relative;
-}
-
-.menu-bar .mode .sun-moon {
-    height: 50px;
-    width: 60px;
-}
-
-.mode .sun-moon i {
-    position: absolute;
-}
-.mode .sun-moon i.sun {
-    opacity: 0;
-}
-body.dark .mode .sun-moon i.sun {
-    opacity: 1;
-}
-body.dark .mode .sun-moon i.moon {
-    opacity: 0;
-}
-
-.menu-bar .bottom-content .toggle-switch {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    min-width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.toggle-switch .switch {
-    position: relative;
-    height: 22px;
-    width: 40px;
-    border-radius: 25px;
-    background-color: var(--toggle-color);
-}
-
-.switch::before {
-    content: "";
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    background-color: var(--sidebar-color);
-}
-
-body.dark .switch::before {
-    left: 20px;
 }
 
 section {
@@ -286,9 +227,6 @@ section .text {
     margin-left: 78px;
     width: calc(100% - 78px);
 }
-body.dark section .text {
-    color: var(--text-color);
-}
 
 section#home .welcome-container {
     background-color: var(--sidebar-color);
@@ -298,21 +236,9 @@ section#home .welcome-container {
     margin-bottom: 7vh;
 }
 
-body.dark section#home .welcome-container {
-    background-color: var(--sidebar-color);
-}
-
 section#home .welcome-container p {
     color: var(--red-color);
     font-size: 25px;
-}
-
-body.dark section#home .welcome-container p {
-    color: #ccc;
-}
-
-body.dark .message {
-    color: #96969f;
 }
 
 section#borrow-history .borrowHistory-wrapper {
@@ -332,27 +258,12 @@ section#borrow-history .book-container {
     align-items: flex-start;
     flex-direction: column;
     align-items: center;
+    color: var(--text-color);
 }
 
 section#borrow-history img {
     aspect-ratio: 1 / 1;
     width: 50%;
-}
-
-section#borrow-history h4 {
-    color: #000;
-}
-
-body.dark section#borrow-history h4{
-    color: #ccc;
-}
-
-section#borrow-history p {
-    color: #000;
-}
-
-body.dark section#borrow-history p{
-    color: #ccc;
 }
 
 @media only screen and (max-width: 786px) {
@@ -395,7 +306,7 @@ section#reservations h3 {
     font-size: 1.563rem;
 }
 
-body.dark section#reservations h3 {
+section#reservations h3 {
     color: var(--text-color);
 }
 
@@ -411,7 +322,8 @@ body.dark section#reservations h3 {
 }
 
 .book-readinglist {
-    background-color: #fff;
+    border-radius: 10px;
+    background-color: var(--sidebar-color);
     width: 50em;
     height: 200px;
     padding: 20px;
@@ -427,6 +339,7 @@ body.dark section#reservations h3 {
     flex-direction: column;
     align-items: start;
     gap: 1.5vh;
+    color: var(--text-color);
 }
 
 .search-box-home {
@@ -441,6 +354,7 @@ body.dark section#reservations h3 {
     display: flex;
     align-items: center;
     box-shadow: 4px 4px 0 rgb(255, 0, 0);
+    color: var(--text-color);
 }
 
 .search-box-home:has(input:focus), 
@@ -465,11 +379,11 @@ body.dark section#reservations h3 {
 }
 
 .section-header {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 30vw;
     width: 40vw;
-    background-color: white;
+    background-color: var(--sidebar-color   );
     padding: 17px 0;
     border-radius: 20px;
     box-shadow: 4px 4px 0 rgb(255, 0, 0);
@@ -526,19 +440,43 @@ body.dark section#reservations h3 {
     height: fit-content;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        --body-color: #18191a;
-        --sidebar-color: #242526;
-        --primary-color: #3a3b3c;
-        --primary-color-light: #3a3b3c;
-        --toggle-color: #fff;
-        --text-color: #ccc;
-        --text-color-inv-dark: #ccc;
-        --red-color: #f00;
-    }
+.toggle-checkbox {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: gray;
+    position: absolute;
+    margin-left: 10px;
 }
 
+.toggle-checkbox:has(input:focus) {
+    outline: 2px solid red;
+    outline-offset: 2px;
+}
+
+.toggle-checkbox input {
+    position: fixed;
+    width: 0;
+    height: 0;
+}
+
+.toggle-checkbox .round {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.toggle-checkbox:has(input:checked) {
+    background-color: red;
+}
+
+.toggle-checkbox:has(input:checked) .round {
+    left: 20px;
+}
 
 @media only screen and (max-width: 478px) {
     body {
@@ -579,17 +517,18 @@ body.dark section#reservations h3 {
     }
 
     .section-header {
+        position: fixed;
         z-index: 2;
         box-shadow: none;
         top: 0px;
         text-wrap: nowrap;
-        justify-content: center;
     }
 
     .search-box-home {
+        position: fixed;
         z-index: 2;
         top: 5px;
-        position: fixed;
+        box-shadow: none;
     }
 
     .search-box-home:has(input:focus) {
