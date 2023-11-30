@@ -21,6 +21,7 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --text-color-inv-dark: #707070;
 
     --body-color: #eaeefa;
     --text-colorDark: #000000;
@@ -74,6 +75,10 @@ a {
     text-decoration: none;
 }
 
+label {
+    color: var(--text-color);
+}
+
 button a {
     color: white;
 }
@@ -82,6 +87,7 @@ button a {
     padding-right: 10px;
 }
 
-h1 {
+.special-text {
     color: red;
 }
+
