@@ -556,7 +556,7 @@ section#depositos {
         height: auto;
         padding: 2rem;
         border-radius: 1rem;
-        color: #fff;
+        color: var(--text-color);
     }
 
     & > div:nth-child(2) {
@@ -657,7 +657,7 @@ section#payment-history {
         height: auto;
         padding: 2rem;
         border-radius: 1rem;
-        color: #fff;
+        color: var(--text-color);
     }
 
     & > div:nth-child(2) {
@@ -698,12 +698,12 @@ section#payment-history {
         
               & > label.history-open:hover {
                 background-color: var(--primary-color);
-                color: #fff;
+                color: var(--text-color);
               }
         
               & input:checked + .history-open {
                 background-color: var(--primary-color);
-                color: #fff;
+                color: var(--text-color);
               }
         
               & input:checked + .history-open::after {
@@ -729,7 +729,7 @@ section#payment-history {
               
               & label.history-close:hover {
                 background-color: var(--primary-color);
-                color: #fff;
+                color: var(--text-color);
               }
             }
         }
