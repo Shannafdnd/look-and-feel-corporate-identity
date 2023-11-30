@@ -649,5 +649,65 @@ section#payment-history {
         & h3 {
             padding-bottom: 1rem;
         }
+
+        & > ul {
+            border-radius: 15px;
+            overflow: hidden;
+        
+            & > li {
+              width: 100%;
+              overflow: hidden;
+              background-color: var(--body-color);
+        
+              & > input {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+              }
+             
+              & > label {
+                display: flex;
+                justify-content: space-between;
+                padding: 1em;
+                cursor: pointer;
+              }
+        
+              & > label.history-open:hover {
+                background-color: var(--primary-color);
+                color: #fff;
+              }
+        
+              & input:checked + .history-open {
+                background-color: var(--primary-color);
+                color: #fff;
+              }
+        
+              & input:checked + .history-open::after {
+                transform: rotate(90deg);
+              }
+        
+              & > p {
+                max-height: 0;
+                padding: 0 1em;
+                background-color: var(--primary-color-light);
+                transition: all .5s ease-in-out;
+              }
+        
+              & > input:checked ~ p {
+                max-height: 100vh;
+                padding: 1em;
+              }
+        
+              & label.history-close {
+                padding: 1em;
+                font-size: 0.75em;
+              }
+              
+              & label.history-close:hover {
+                background-color: var(--primary-color);
+                color: #fff;
+              }
+            }
+        }
     }
 }
