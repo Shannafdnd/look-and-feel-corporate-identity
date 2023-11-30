@@ -692,7 +692,7 @@ section#payment-history {
               & > label {
                 display: flex;
                 justify-content: space-between;
-                padding: 1em;
+                padding: 1rem;
                 cursor: pointer;
               }
         
@@ -712,19 +712,19 @@ section#payment-history {
         
               & > p {
                 max-height: 0;
-                padding: 0 1em;
+                padding: 0 1rem;
                 background-color: var(--primary-color-light);
                 transition: all .5s ease-in-out;
               }
         
               & > input:checked ~ p {
                 max-height: 100vh;
-                padding: 1em;
+                padding: 1rem;
               }
         
               & label.history-close {
-                padding: 1em;
-                font-size: 0.75em;
+                padding: 1rem;
+                font-size: 0.75rem;
               }
               
               & label.history-close:hover {
