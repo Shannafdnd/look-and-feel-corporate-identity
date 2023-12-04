@@ -24,6 +24,7 @@ function setDarkMode(value) {
         body.style.setProperty("--text-color", "#ccc");
         body.style.setProperty("--text-color-inv-dark", "#ccc");
         body.style.setProperty("--red-color", "#f00");
+        body.style.setProperty("backdrop-filter", "saturate(0.6)");
     } else {
         console.log("removing");
         body.style.removeProperty("--body-color");
@@ -34,10 +35,11 @@ function setDarkMode(value) {
         body.style.removeProperty("--text-color");
         body.style.removeProperty("--text-color-inv-dark");
         body.style.removeProperty("--red-color");
+        body.style.removeProperty("backdrop-filter");
     }
 }
 
-setDarkMode(getCookie("darkmode") ?? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
+setDarkMode(getCookie("darkmode") === "true" ?? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
 
 // check if browser color scheme is changed
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {

@@ -4,6 +4,7 @@ body {
     background-position: bottom right;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100vh;
 }
 
 ::selection {
