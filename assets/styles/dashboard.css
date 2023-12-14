@@ -12,6 +12,8 @@ body {
     color: var(--sidebar-color);
 }
 
+/* Navbar ---------------------------------------- */
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -201,6 +203,8 @@ header .image-text .profession {
     display: none;
 }
 
+/* Sections ---------------------------------------- */
+
 section {
     margin-left: 250px;
     min-height: calc(100vh - 117px);
@@ -228,120 +232,6 @@ section .text {
     margin-left: 78px;
     min-height: calc(100vh - 117px);
     width: calc(100% - 78px);
-}
-
-section#home .welcome-container {
-    background-color: var(--sidebar-color);
-    border-radius: 2rem;
-    height: 30vh;
-    padding: 2rem;
-    margin-bottom: 7vh;
-}
-
-section#home .welcome-container p {
-    color: var(--red-color);
-    font-size: 25px;
-}
-
-section#borrow-history .borrowHistory-wrapper {
-    background-color: var(--sidebar-color);
-    border-radius: 1rem;
-    height: auto;
-    padding: 2rem;
-}
-
-section#borrow-history .flex-container {
-    display: flex;
-    flex-direction: row;
-}
-
-section#borrow-history .book-container {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    align-items: center;
-    color: var(--text-color);
-}
-
-section#borrow-history img {
-    aspect-ratio: 1 / 1;
-    width: 50%;
-}
-
-@media only screen and (max-width: 786px) {
-    section#borrow-history .flex-container {
-        flex-direction: row;
-        gap: 20px;
-    }
-}
-
-@media only screen and (max-width: 478px) {
-
-    section#borrow-history .flex-container {
-        flex-direction: column;
-    }
-
-    section#borrow-history .book-container {
-        margin-top: 1.25rem;
-        flex-direction: column;
-    }
-
-    section#borrow-history h4 {
-        font-size: 16px;
-    }
-
-    section#borrow-history p {
-        font-size: 14px;
-    }
-}
-
-section#reservations .reservation-wrapper {
-    background-color: var(--sidebar-color);
-    border-radius: 1rem;
-    height: auto;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-section#reservations h3 {
-    font-size: 1.563rem;
-}
-
-section#reservations h3 {
-    color: var(--text-color);
-}
-
-@media only screen and (max-width: 478px) {
-    section#reservations h3 {
-        font-size: 1.25rem;
-    }
-}
-
-.reading-list {
-    display: grid;
-    gap: 20px;
-}
-
-.book-readinglist {
-    border-radius: 10px;
-    background-color: var(--sidebar-color);
-    width: 50em;
-    height: 200px;
-    padding: 20px;
-    display: flex;
-    width: 80vw;
-    left: 10vw;
-    display: flex;
-    gap: 5vw;
-}
-
-.list-text {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5vh;
-    color: var(--text-color);
 }
 
 .search-box-home {
@@ -411,6 +301,60 @@ section#reservations h3 {
 
 }
 
+/* Home ---------------------------------------- */
+
+section#home .welcome-container {
+    background-color: var(--sidebar-color);
+    border-radius: 2rem;
+    height: 30vh;
+    padding: 2rem;
+    margin-bottom: 7vh;
+}
+
+section#home .welcome-container p {
+    color: var(--red-color);
+    font-size: 25px;
+}
+
+/* Reading list ---------------------------------------- */
+
+.reading-list {
+    display: grid;
+    gap: 20px;
+}
+
+.book-readinglist {
+    border-radius: 10px;
+    background-color: var(--sidebar-color);
+    width: 50em;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    width: 80vw;
+    left: 10vw;
+    display: flex;
+    gap: 5vw;
+}
+
+.book-readinglist .remove {
+    align-items: center;
+    font-size: xx-large;
+    cursor: pointer;
+    display: none;
+}
+
+.editing .book-readinglist .remove {
+    display: flex;
+}
+
+.list-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vh;
+    color: var(--text-color);
+}
+
 .books-row {
     margin-top: 3vh;
     width: 100%;
@@ -441,6 +385,282 @@ section#reservations h3 {
 .reserve {
     height: fit-content;
 }
+
+.edit-button-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+/* Borrow history ---------------------------------------- */
+
+section#borrow-history .borrowHistory-wrapper {
+    background-color: var(--sidebar-color);
+    border-radius: 1rem;
+    height: auto;
+    padding: 2rem;
+}
+
+section#borrow-history .flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+section#borrow-history .book-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+}
+
+section#borrow-history img {
+    aspect-ratio: 1 / 1;
+    width: 50%;
+}
+
+@media only screen and (max-width: 786px) {
+    section#borrow-history .flex-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 478px) {
+
+    section#borrow-history .flex-container {
+        flex-direction: column;
+    }
+
+    section#borrow-history .book-container {
+        margin-top: 1.25rem;
+        flex-direction: column;
+    }
+
+    section#borrow-history h4 {
+        font-size: 16px;
+    }
+
+    section#borrow-history p {
+        font-size: 14px;
+    }
+}
+
+/* Betaalgeschiedenis ---------------------------------------- */
+
+section#payment-history {
+
+    & > div {
+        background-color: var(--sidebar-color);
+        height: auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        color: var(--text-color);
+    }
+
+    & > div:nth-child(2) {
+
+        & > p {
+            line-height: 1.5rem;
+        }
+    }
+
+    & div:nth-child(3) {
+        margin-top: 1.5rem;
+
+        & h3 {
+            padding-bottom: 1rem;
+        }
+
+        & > ul {
+            border-radius: 15px;
+            overflow: hidden;
+        
+            & > li {
+              width: 100%;
+              overflow: hidden;
+              background-color: var(--body-color);
+        
+              & > input {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+              }
+             
+              & > label {
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                cursor: pointer;
+              }
+        
+              & > label.history-open:hover {
+                background-color: var(--primary-color);
+                color: var(--text-color);
+              }
+        
+              & input:checked + .history-open {
+                background-color: var(--primary-color);
+                color: var(--text-color);
+              }
+        
+              & input:checked + .history-open::after {
+                transform: rotate(90deg);
+              }
+        
+              & > p {
+                max-height: 0;
+                padding: 0 1rem;
+                background-color: var(--primary-color-light);
+                transition: all .5s ease-in-out;
+              }
+        
+              & > input:checked ~ p {
+                max-height: 100vh;
+                padding: 1rem;
+              }
+        
+              & label.history-close {
+                padding: 1rem;
+                font-size: 0.75rem;
+              }
+              
+              & label.history-close:hover {
+                background-color: var(--primary-color);
+                color: var(--text-color);
+              }
+            }
+        }
+    }
+}
+
+/* Reservations ---------------------------------------- */
+
+section#reservations .reservation-wrapper {
+    background-color: var(--sidebar-color);
+    border-radius: 1rem;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section#reservations h3 {
+    font-size: 1.563rem;
+}
+
+section#reservations h3 {
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 478px) {
+    section#reservations h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Depositos ---------------------------------------- */
+
+section#depositos {
+
+    & > div {
+        background-color: var(--sidebar-color);
+        height: auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        color: var(--text-color);
+    }
+
+    & > div:nth-child(2) {
+
+        & > p {
+            line-height: 1.5rem;
+
+            & > a {
+              display: inline-block;
+              color: red;
+            }
+            
+            & > a::after {
+              content: "";
+              width: 0px;
+              height: 2px;
+              display: block;
+              transition: var(--tran-02);
+              background: red;
+            }
+              
+            & > a:hover::after {
+              width: 100%;
+            }
+        }
+    }
+
+    
+    & > div:nth-child(3) {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.5rem;
+
+        & h3 {
+            padding-bottom: 1rem;
+        }
+
+        & > div {
+            & b {
+                font-size: 2rem;
+            }
+        }
+
+        & > aside {
+            & > form {
+                padding-bottom: .5rem;
+
+                & > input:nth-child(2) {
+                    border: 1px solid;
+                    border-radius: .3rem;
+                } 
+                & > input:nth-child(3) {
+                    border: 1px solid;
+                    border-radius: .3rem;
+                    padding: 0 .1rem    ;
+                } 
+            }
+
+            & > div {
+                display: flex;
+                align-items: center;
+
+                & > svg {
+                    margin-left: .5rem;
+                    fill: #f00;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        & div:nth-child(3) {
+            flex-direction: column;
+            justify-content: start;
+
+            & > aside {
+                
+                & > h3 {
+                    padding: 1rem 0;
+                }
+
+                & > div {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+/* Instellingen ---------------------------------------- */
 
 .toggle-checkbox {
     width: 40px;
@@ -546,193 +766,4 @@ section#reservations h3 {
         display: none;
     }
 
-}
-
-/* Depositos ---------------------------------------- */
-
-section#depositos {
-
-    & > div {
-        background-color: var(--sidebar-color);
-        height: auto;
-        padding: 2rem;
-        border-radius: 1rem;
-        color: var(--text-color);
-    }
-
-    & > div:nth-child(2) {
-
-        & > p {
-            line-height: 1.5rem;
-
-            & > a {
-              display: inline-block;
-              color: red;
-            }
-            
-            & > a::after {
-              content: "";
-              width: 0px;
-              height: 2px;
-              display: block;
-              transition: var(--tran-02);
-              background: red;
-            }
-              
-            & > a:hover::after {
-              width: 100%;
-            }
-        }
-    }
-
-    
-    & > div:nth-child(3) {
-        margin-top: 1.5rem;
-        display: flex;
-        justify-content: space-between;
-        line-height: 1.5rem;
-
-        & h3 {
-            padding-bottom: 1rem;
-        }
-
-        & > div {
-            & b {
-                font-size: 2rem;
-            }
-        }
-
-        & > aside {
-            & > form {
-                padding-bottom: .5rem;
-
-                & > input:nth-child(2) {
-                    border: 1px solid;
-                    border-radius: .3rem;
-                } 
-                & > input:nth-child(3) {
-                    border: 1px solid;
-                    border-radius: .3rem;
-                    padding: 0 .1rem    ;
-                } 
-            }
-
-            & > div {
-                display: flex;
-                align-items: center;
-
-                & > svg {
-                    margin-left: .5rem;
-                    fill: #f00;
-                }
-            }
-
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        & div:nth-child(3) {
-            flex-direction: column;
-            justify-content: start;
-
-            & > aside {
-                
-                & > h3 {
-                    padding: 1rem 0;
-                }
-
-                & > div {
-                    flex-direction: row;
-                }
-            }
-        }
-    }
-}
-
-/* Betaalgeschiedenis ---------------------------------------- */
-
-section#payment-history {
-
-    & > div {
-        background-color: var(--sidebar-color);
-        height: auto;
-        padding: 2rem;
-        border-radius: 1rem;
-        color: var(--text-color);
-    }
-
-    & > div:nth-child(2) {
-
-        & > p {
-            line-height: 1.5rem;
-        }
-    }
-
-    & div:nth-child(3) {
-        margin-top: 1.5rem;
-
-        & h3 {
-            padding-bottom: 1rem;
-        }
-
-        & > ul {
-            border-radius: 15px;
-            overflow: hidden;
-        
-            & > li {
-              width: 100%;
-              overflow: hidden;
-              background-color: var(--body-color);
-        
-              & > input {
-                position: absolute;
-                opacity: 0;
-                z-index: -1;
-              }
-             
-              & > label {
-                display: flex;
-                justify-content: space-between;
-                padding: 1rem;
-                cursor: pointer;
-              }
-        
-              & > label.history-open:hover {
-                background-color: var(--primary-color);
-                color: var(--text-color);
-              }
-        
-              & input:checked + .history-open {
-                background-color: var(--primary-color);
-                color: var(--text-color);
-              }
-        
-              & input:checked + .history-open::after {
-                transform: rotate(90deg);
-              }
-        
-              & > p {
-                max-height: 0;
-                padding: 0 1rem;
-                background-color: var(--primary-color-light);
-                transition: all .5s ease-in-out;
-              }
-        
-              & > input:checked ~ p {
-                max-height: 100vh;
-                padding: 1rem;
-              }
-        
-              & label.history-close {
-                padding: 1rem;
-                font-size: 0.75rem;
-              }
-              
-              & label.history-close:hover {
-                background-color: var(--primary-color);
-                color: var(--text-color);
-              }
-            }
-        }
-    }
 }

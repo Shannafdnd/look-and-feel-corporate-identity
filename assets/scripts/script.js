@@ -92,3 +92,20 @@ function standardTab() {
 document.addEventListener("DOMContentLoaded", function() {
   standardTab();
 });
+
+let button  = document.querySelector('.edit')
+let readinglist = document.querySelector('.reading-list')
+
+button.addEventListener('click', leeslijstEdit)
+
+function leeslijstEdit() {
+    readinglist.classList.toggle("editing")
+}
+
+function remove(e) {
+    e.target.parentElement.parentElement.remove()
+}
+
+document.querySelectorAll(".remove").forEach((b) => {
+    b.addEventListener("pointerup", remove)
+})
